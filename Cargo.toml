@@ -3,8 +3,7 @@ name = "eventsource-threaded"
 version = "0.1.0"
 authors = ["Robert Kornacki <11645932+robkorn@users.noreply.github.com>"]
 edition = "2018"
-
-description = "Library for accessing EventSource/Server-Sent Events endpoints via threads & with headers support."
+description = "Library for accessing EventSource/Server-Sent Events endpoints via threads with headers support."
 repository = "https://github.com/robkorn/eventsource-threaded"
 license = "MIT"
 keywords = ["http"]

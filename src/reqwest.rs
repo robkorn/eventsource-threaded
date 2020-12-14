@@ -44,7 +44,6 @@ pub struct Client {
     last_event_id: Option<String>,
     last_try: Option<Instant>,
     headers: HeaderMap,
-
     /// Reconnection time in milliseconds. Note that the reconnection time can be changed by the
     /// event stream, so changing this may not make a difference.
     pub retry: Duration,

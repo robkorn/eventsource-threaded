@@ -1,5 +1,4 @@
 # EventSource-Threaded
-
 EventSource-Threaded is a Rust library for reading from Server-Sent Events endpoints. It transparently
 sends HTTP requests on a separate thread and only exposes a stream of events to the user via a channel receiver. It handles automatic
 reconnection and parsing of the `text/event-stream` data format.
@@ -10,7 +9,6 @@ EventSource-Threaded is a fork of [this EventSource library](https://github.com/
 - Minor renaming/removing methods/interface change
 
 ## Examples
-
 ```rust
 use eventsource-threaded::reqwest::Client;
 use reqwest::Url;
