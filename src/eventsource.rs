@@ -4,6 +4,10 @@ use crossbeam::channel::{unbounded, Receiver};
 use reqwest::header::HeaderMap;
 use std::thread;
 
+/// The type of the `Receiver` which sends back event from the EventSource
+/// client.
+pub type ReceiverSource = Receiver<Result<Event>>;
+
 pub struct EventSource {}
 
 impl EventSource {
@@ -11,7 +15,7 @@ impl EventSource {
     /// a separate thread and sends all events through a channel
     /// through a `Receiver`.
     ///
-    pub fn new(url: reqwest::Url, headers: HeaderMap) -> Receiver<Result<Event>> {
+    pub fn new(url: reqwest::Url, headers: HeaderMap) -> ReceiverSource {
         let (s, r) = unbounded();
 
         thread::spawn(move || {

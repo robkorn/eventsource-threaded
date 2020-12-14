@@ -28,4 +28,4 @@ pub mod eventsource;
 #[cfg(feature = "with-reqwest")]
 mod reqwest;
 
-pub use eventsource::EventSource;
+pub use eventsource::{EventSource, ReceiverSource};
