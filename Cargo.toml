@@ -1,0 +1,20 @@
+[package]
+name = "eventsource-threaded"
+version = "0.1.0"
+authors = ["Robert Kornacki <11645932+robkorn@users.noreply.github.com>"]
+edition = "2018"
+
+description = "Library for accessing EventSource/Server-Sent Events endpoints via threads & with headers support."
+repository = "https://github.com/robkorn/eventsource-threaded"
+license = "MIT"
+keywords = ["http"]
+
+[features]
+default = ["with-reqwest"]
+with-reqwest = ["reqwest"]
+
+[dependencies]
+error-chain         = "0.12.4"
+reqwest             = { version = "0.10.9", features = ["blocking"], optional = true }
+mime                = "0.3.16"
+crossbeam           = "0.8.0"
